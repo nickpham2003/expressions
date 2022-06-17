@@ -13,7 +13,7 @@ variable "cidr_subnet" {
 variable "aws_region" {
   description = "The AWS region to deploy your instance"
   type        = string
-  default     = "us-east-2"
+  default     = "ap-southeast-1"
 }
 
 variable "name" {
@@ -28,3 +28,8 @@ variable "team" {
   default     = "hashicorp"
 }
 
+variable "high_availability" {
+  type        = bool
+  description = "If this is a multiple instance deployment, choose `true` to deploy 3 instances"
+  default     = true
+}
